@@ -10,11 +10,12 @@ const customers = 16500;
 const energyDrinkConsumers = 0.15;
 const citrusFEDC = 0.58;
 
-// Calculations
-const PurchaseOneOrMoreED = customers * energyDrinkConsumers;
-const PreferCitrusFEDC = PurchaseOneOrMoreED * citrusFEDC;
+// Calculations --> Round to the nearest whole number
+const PurchaseOneOrMoreED = Math.round(customers * energyDrinkConsumers);
+const PreferCitrusFEDC = Math.round(PurchaseOneOrMoreED * citrusFEDC);
 
 // Remember: The citric-flavored energy drink consumers are a subset of the energy drink consumers.
+// Remember: The Math.round() Method rounds a number to the nearest integer.
 
 // Output
 console.log("********** Energy Drink Consumption **********");
